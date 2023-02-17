@@ -1,5 +1,6 @@
 import React from 'react';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa"
 import logo from "../../assets/images/Nike.jpg";
 import "./Header.css";
@@ -7,20 +8,20 @@ import "./Header.css";
 export const Header = () => {
     return (
         <header>
-            <div className="menu">
-            <GiHamburgerMenu />
-            </div>
-            <a href="">
+            {/* <div className="menu">
+                <GiHamburgerMenu />
+            </div> */}
+            <Link to="/">
                 <div className="logo">
                     <img src={logo} alt="" />
                 </div>
-            </a>
+            </Link>
             <ul>
                 <li>
-                    <a href="">Inicio</a>
+                    <Link to="/">INICIO</ Link>
                 </li>
                 <li>
-                    <a href="">Productos</a>
+                    <Link to="/productos">PRODUCTOS</Link>
                 </li>
             </ul>
             <div className="cart">
