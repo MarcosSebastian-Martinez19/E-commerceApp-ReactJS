@@ -4,6 +4,7 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { Paginas } from "./components/Paginas";
 import { DataProvider } from './Context/DataProvider';
+import { Carrito } from './components/Carrito/Carrito';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="App">
         <Router>
           <Header />
+          <Carrito />
           <Paginas />
         </Router>
       </div>
