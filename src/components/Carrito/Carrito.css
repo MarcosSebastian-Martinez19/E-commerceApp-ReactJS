@@ -13,11 +13,10 @@
 
 .carrito {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 80%;
-    height: 80%;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
     border-radius: 8px;
     overflow-x: scroll;
     transition: all 300ms ease-in-out;
@@ -28,7 +27,9 @@
 
 .carrito h2 {
     text-align: center;
+    margin-top: 2rem;
     font-size: 2rem;
+    z-index: 10;
 }
 
 .carritos.show {
@@ -36,18 +37,21 @@
 }
 
 .carrito.show {
-    transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
     visibility: visible;
 }
 
+.carrito__close {
+    position: fixed;
+}
+
 .carrito__close .close-icon {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     transform: all 300ms ease-in-out;
-    margin: 3rem 0 0 2rem;
+    margin: .5rem 0 0 .5rem;
 }
 
 .carrito__close .close-icon:hover {
@@ -55,56 +59,70 @@
 }
 
 .carrito__center {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    height: max-content;
+    margin: 2rem auto;
 }
 
 .carrito__item {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    width: 80%;
-    margin: 2rem auto;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+    width: 85%;
+    grid-gap: 1.5rem;
+    margin: 1rem auto;
     box-shadow: 0 1px 10px #08a05c;
     border-radius: 5px;
 }
 
 .carrito__item img {
-    width: 9rem;
+    width: 7rem;
+}
+
+.carrito__item .item__header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem 0 .5rem 0;
 }
 
 .carrito__item h3 {
-    margin-top: 1.5rem;
     font-family: Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .carrito__item .price {
     color: #1a202c;
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-align: start;
-    margin-left: -1rem;
+}
+
+.carrito__item .valores {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .carrito__item .item-icon {
     fill: #08a05c;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     margin-top: .3rem;
 }
 
 .carrito__item .cantidad {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
 .carrito__item .remove__item .trash-icon {
-    width: 60px;
-    height: 80px;
+    width: 30px;
+    height: 50px;
     color: crimson;
-    margin-top: 2rem;
+    cursor: pointer;
 }
 
 .carrito__footer {

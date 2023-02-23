@@ -10,6 +10,7 @@ export const Header = () => {
 
     const value = useContext(DataContext);
     const [menu, setMenu] = value.menu;
+    const [carrito] = value.carrito;
 
     const toogleMenu = () => {
         setMenu(!menu);
@@ -33,9 +34,9 @@ export const Header = () => {
                     <Link to="/productos">PRODUCTOS</Link>
                 </li>
             </ul>
-            <div className="cart">
-                <FaShoppingCart className="cart__icon" onClick={toogleMenu} />
-                <span className="item__total">0</span>
+            <div className="cart" onClick={toogleMenu}>
+                <FaShoppingCart className="cart__icon" />
+                <span className="item__total">{carrito.length}</span>
             </div>
         </header>
     )

@@ -10,7 +10,7 @@
     max-width: 1530px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     place-items: center;
     gap: 3rem 2rem;
     box-sizing: border-box;
@@ -32,7 +32,7 @@
 }
 
 .producto__img img {
-    width: 310px;
+    width: 18rem;
 }
 
 .producto__footer {
@@ -42,7 +42,7 @@
 
 .producto__footer h1 {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #1a202c;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -51,12 +51,13 @@
     font-weight: 700;
     color: rgba(0, 0, 0, .555);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .producto__footer .price {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #1a202c;
+    font-weight: bold;
 }
 
 .producto .button {
@@ -73,6 +74,10 @@
     outline: 0;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .button .btn .cart__add {
