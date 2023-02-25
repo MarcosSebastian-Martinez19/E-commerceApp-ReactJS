@@ -64,7 +64,7 @@ export const Carrito = () => {
                                             <img src={producto.image} alt="" />
                                             <div className="item__header">
                                                 <h3>{producto.title}</h3>
-                                                <p className="price">${producto.price}</p>
+                                                <p className="price">${producto.price * producto.cantidad}</p>
                                             </div>
                                             <div className="valores">
                                                 <AiFillMinusCircle name="down-arrow" className="item-icon" onClick={() => resta(producto.id)} />

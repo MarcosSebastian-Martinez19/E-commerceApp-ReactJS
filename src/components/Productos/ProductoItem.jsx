@@ -11,7 +11,7 @@ export const ProductoItem = ({ id, title, price, image, category, cantidad }) =>
 
     return (
         <div key={id} className="producto">
-            <Link to={`7producto/${id}`}>
+            <Link to={`/producto/${id}`}>
                 <div className="producto__img">
                     <img src={image} alt={title} />
                 </div>
